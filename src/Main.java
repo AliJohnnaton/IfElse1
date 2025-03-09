@@ -72,6 +72,7 @@ public class Main {
         }
     }
 
+
     public static void seventhTask() {
         int one = 2;
         int two = 3;

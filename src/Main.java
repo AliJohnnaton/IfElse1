@@ -53,23 +53,18 @@ public class Main {
     }
 
     public static void sixthTask() {
-        int people = 7;
+        int people = 104;
         int fullCapacity = 102;
         int sitCapacity = 60;
         int stayCapacity = fullCapacity - sitCapacity;
-        if (people < fullCapacity && people > 0) {
-            if (people < sitCapacity)
-                System.out.print("В вагоне " + (sitCapacity - people) + " сидячих мест, и " + stayCapacity + " стоячих мест");
-            else
-                System.out.print("В вагоне " + (fullCapacity - people) + " стоячих мест");
-        } else {
-            if (people >= fullCapacity)
-                System.out.print("В вагоне нет свободных мест");
-            else if (people == 0)
-                System.out.print("Вагон пуст садись куда хочешь");
-            else
-                System.out.print("Ошибка");
-        }
+        if (people < sitCapacity)
+            System.out.print("В вагоне " + (sitCapacity - people) + " сидячих мест, и " + stayCapacity + " стоячих мест");
+        else if (people >= sitCapacity && people < fullCapacity)
+            System.out.print("В вагоне " + (fullCapacity - people) + " стоячих мест");
+        else if (people == 0)
+            System.out.print("Вагон пуст садись куда хочешь");
+        else
+            System.out.print("В вагоне нет свободных мест");
     }
 
 
